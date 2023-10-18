@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Mobiles extends StatelessWidget {
-  const Mobiles({super.key});
+class MobileScreenLayout extends StatelessWidget {
+  const MobileScreenLayout({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(child: Text('Hello from mobile.')),
+    );
   }
 }
