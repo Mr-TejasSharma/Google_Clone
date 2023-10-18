@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_clone/colors.dart';
+import 'package:google_clone/widgets/colors.dart';
 
 class Search extends StatelessWidget {
   const Search({Key? key}) : super(key: key);
@@ -35,14 +35,21 @@ class Search extends StatelessWidget {
                 Radius.circular(30),
               ),
             ),
-            prefixIcon: SvgPicture.asset(
-              'assets/images/search-icon.svg',
-              color: searchBorder,
-              width: 1,
+            prefixIcon: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SvgPicture.asset(
+                'assets/images/search-icon.svg',
+                color: searchBorder,
+                width: 1,
+              ),
             ),
-            suffixIcon: SvgPicture.asset('assets/images/mic-icon.svg',
-            width: 1,)
-          )),
+            suffixIcon: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SvgPicture.asset('assets/images/mic-icon.svg',
+              width: 1,),
+            )
+          ),
+          ),
         ),
       ],
     );
